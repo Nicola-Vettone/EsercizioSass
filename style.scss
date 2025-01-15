@@ -1,0 +1,45 @@
+@import "./partials/variables";
+@import "./partials/reset";
+@import "./partials/maps";
+@import "./partials/color";
+@import "./partials/mixins";
+@import "./partials/placeholders";
+@import "./partials/spacings";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,700;1,700&family=Oswald:wght@200..700&display=swap");
+
+//HEADER
+header {
+  background-color: $headColor;
+  display: flex;
+  align-items: center;
+  span {
+    margin-right: auto;
+  }
+  nav {
+    ul {
+      margin: $size-0;
+      li {
+        display: inline-block;
+        a {
+          color: $textColor;
+        }
+      }
+    }
+  }
+}
+main {
+  background-color: $headColor;
+  color: $textColor;
+  margin-top: $size-3;
+  margin-bottom: $size-3;
+
+  p {
+    display: inline-block;
+  }
+}
+
+img {
+  width: $size-px;
+  height: $size-hg;
+  display: inline-block;
+}

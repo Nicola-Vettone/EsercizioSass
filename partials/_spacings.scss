@@ -1,0 +1,27 @@
+//Spacings
+
+@mixin generate-spacing-classes($property) {
+  @each $direction in $directions {
+    @each $size in $sizes {
+      .#{$property}-#{$direction}-#{$size} {
+        #{$property}-#{$direction}: map-get(
+          (
+            sm: 4px,
+            normal: 8px,
+            md: 16px,
+            lg: 24px,
+            xl: 32px,
+            xxl: 40px,
+          ),
+          $size
+        );
+      }
+    }
+  }
+}
+
+// Padding
+@include generate-spacing-classes("padding");
+
+// Margin
+@include generate-spacing-classes("margin");
